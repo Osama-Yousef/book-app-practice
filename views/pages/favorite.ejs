@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>favorites</title>
+</head>
+<body>
+
+    <header>
+        <h1>
+            My Favorite books  :
+        </h1>
+    </header>
+    
+<main>
+
+<div class="allContainer">
+    <%data.forEach(val=>{%>
+
+<div class="container">
+    <img src="<%=val.image%>" alt="">
+<h3><%=val.title%></h3>
+<h4><%=val.author%></h4>
+
+
+<a href="/details/<%=val.id%>"><button >View Details</button></a>
+
+
+
+</div>
+
+   <%})%>
+
+</div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>search</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Searching Form :
+        </h1>
+    </header>
+    <main>
+
+        <!-- https://www.googleapis.com/books/v1/volumes?q=${title}+${type} -->
+
+
+<form action="/search" method="GET">
+
+<label for="">search for :</label>
+<input type="text" required name="title">
+
+<label for="">title</label>
+<input type="radio" required name="radio" value="title">
+
+<label for="">author</label>
+<input type="radio" required name="radio" value="author">
+
+<input type="submit" value="search">
+
+</form>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>search results</title>
+</head>
+<body>
+
+    <header>
+        <h1>
+            Search Results :
+        </h1>
+    </header>
+    
+<main>
+
+<div class="allContainer">
+    <%data.forEach(val=>{%>
+
+<div class="container">
+    <img src="<%=val.image%>" alt="">
+<h3><%=val.title%></h3>
+<h4><%=val.author%></h4>
+<p><%=val.description%></p>
+
+<div>
+<button class="show">SELECT</button>
+<form action="/addToDb" method="POST" class="form">
+<input type="text" name="title" value="<%=val.title%>">
+<input type="text" name="author" value="<%=val.author%>">
+<input type="text" name="image" value="<%=val.image%>">
+<input type="text" name="description" value="<%=val.description%>">
+<input type="text" name="isbn" value="<%=val.isbn%>">
+<input type="text" name="bookshelf" required >
+<input type="submit"  value="add to db ">
+
+</form>
+
+</div>
+
+</div>
+
+   <%})%>
+
+</div>
+
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/app.js" ></script>
+
+</body>
+</html>
